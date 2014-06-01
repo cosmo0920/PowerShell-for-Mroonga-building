@@ -1,6 +1,7 @@
 # @$mariadbVer MariaDBVer
 # @$arch win32/winx64
 # @$installSqlDir specify install.sql dir
+. ".\versions.ps1"
 
 function mrnInstall($mariadbVer, $arch, $installSqlDir) {
   cd "mariadb-$mariadbVer-$arch"
@@ -10,7 +11,6 @@ function mrnInstall($mariadbVer, $arch, $installSqlDir) {
   cd ..
 }
 
-$mariadbVer = "10.0.10"
 $installSqlDir = "data"
 
 #specify arch
