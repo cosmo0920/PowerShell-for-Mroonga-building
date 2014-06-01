@@ -1,4 +1,4 @@
-Tiny PoweShell Script to build Mroonga unser Windows environment
+Tiny PoweShell Script to build Mroonga under Windows environment
 ===
 
 ### LICENSE
