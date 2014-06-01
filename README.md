@@ -11,6 +11,8 @@ Tiny PoweShell Script to build Mroonga under Windows environment
  -- *.ps1
 ```
 
+## execution order ps1
+
 ```bat
 powershell> get-mroonga.ps1
 powershell> unzip.ps1
