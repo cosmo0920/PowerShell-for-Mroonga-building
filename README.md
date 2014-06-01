@@ -1,4 +1,4 @@
-Tiny PoweShell Script to build Mroonga under Windows environment
+Tiny PowerShell Script to build Mroonga under Windows environment
 ===
 
 ## Project structure
@@ -17,6 +17,10 @@ Tiny PoweShell Script to build Mroonga under Windows environment
 powershell> get-mroonga.ps1
 powershell> unzip.ps1
 powershell> prepare-building-mroonga.ps1
+cmd> <building Mroonga....>
+powershell> package-unzip.ps1
+powershell> install-mroonga.ps1
+powershell> create-mrnzip.ps1
 ```
 
 ### LICENSE
