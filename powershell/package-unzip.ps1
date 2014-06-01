@@ -2,7 +2,7 @@
 $workDir = "C:\Code\work"
 $mariadbVer = "10.0.10"
 
-function unzipMrnPackage($file, $mariaDBVer, $arch) {
+function unzipMrnPackage($workDir, $mariaDBVer, $arch) {
   $file = "$workDir\mariadb-$mariadbVer-$arch.zip"
   $shell = New-Object -ComObject shell.application
   $zip = $shell.NameSpace($file)
@@ -13,10 +13,10 @@ function unzipMrnPackage($file, $mariaDBVer, $arch) {
 
 $arch = "win32"
 
-unzipMrnPackage $file $mariaDBVer $arch
+unzipMrnPackage $workDir $mariaDBVer $arch
 
 <#
 $arch = "winx64"
 
-unzipMrnPackage $file $mariaDBVer $arch
+unzipMrnPackage $workDir $mariaDBVer $arch
 #>

@@ -11,15 +11,16 @@ function mrnInstall($mariadbVer, $arch, $installSqlDir) {
 }
 
 $mariadbVer = "10.0.10"
-$arch = "win32"
 $installSqlDir = "data"
+
+#specify arch
+$arch = "win32"
 
 mrnInstall $mariadbVer $arch $installSqlDir
 
 <#
-$mariadbVer = "10.0.10"
+#specify arch
 $arch = "winx64"
-$installSqlDir = "data"
 
 mrnInstall $mariadbVer $arch $installSqlDir
 #>
