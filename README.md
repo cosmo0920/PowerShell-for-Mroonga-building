@@ -11,6 +11,14 @@ Tiny PowerShell Script to build Mroonga under Windows environment
  -- *.ps1
 ```
 
+## versions.ps1
+
+```powershell
+$workDir = [specify workdir]
+$mariadbVer = [specify mariaDB version]
+$mroongaVer = [specify Mroonga version]
+```
+
 ## execution order ps1
 
 ```bat
