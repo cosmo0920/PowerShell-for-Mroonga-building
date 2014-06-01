@@ -1,6 +1,5 @@
 # $file: need specify full path
-$workDir = "C:\Code\work"
-$mariadbVer = "10.0.10"
+. ".\versions.ps1"
 
 function unzipMrnPackage($workDir, $mariaDBVer, $arch) {
   $file = "$workDir\mariadb-$mariadbVer-$arch.zip"
@@ -19,4 +18,4 @@ unzipMrnPackage $workDir $mariaDBVer $arch
 $arch = "winx64"
 
 unzipMrnPackage $workDir $mariaDBVer $arch
-#>
+#

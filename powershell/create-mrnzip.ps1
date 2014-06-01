@@ -1,9 +1,7 @@
-$workDir = "C:\Code\work"
-$maridbVer = "10.0.10"
-$mroongaVer = "4.02"
+. ".\versions.ps1"
 
 $arch = "win32"
-$destFile = "$workDir\mariadb-$maridbVer-$arch-with-mroonga-$mroongaVer.zip"
+$destFile = "$workDir\mariadb-$mariadbVer-with-mroonga-$mroongaVer-$arch.zip"
 $srcDir = "$workDir\mariadb-$mariadbVer-$arch"
 
 [Reflection.Assembly]::LoadWithPartialName("System.IO.Compression.FileSystem")
@@ -26,7 +24,7 @@ zip "$destFile" "$srcDir"
 <# 
 ## create winx64 package
 $arch = "winx64"
-$destFile = "$workDir\mariadb-$maridbVer-$arch-with-mroonga-$mroongaVer.zip"
+$destFile = "$workDir\mariadb-$mariadbVer-with-mroonga-$mroongaVer-$arch.zip"
 $srcDir = "$workDir\mariadb-$mariadbVer-$arch"
 
 if (Test-Path $destFile)
