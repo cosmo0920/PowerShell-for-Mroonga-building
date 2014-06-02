@@ -3,6 +3,8 @@
 # @$installSqlDir specify install.sql dir
 . ".\versions.ps1"
 
+cd $workDir
+
 function mrnInstall($mariadbVer, $arch, $installSqlDir) {
   cd "mariadb-$mariadbVer-$arch"
   cmd /c "start .\bin\mysqld.exe"
@@ -18,9 +20,9 @@ $arch = "win32"
 
 mrnInstall $mariadbVer $arch $installSqlDir
 
-<#
 #specify arch
 $arch = "winx64"
 
 mrnInstall $mariadbVer $arch $installSqlDir
-#>
+
+cd ..

@@ -27,9 +27,9 @@ powershell> unzip.ps1
 powershell> prepare-building-mroonga.ps1
 powershell> cd <mroonga build working dir>
 powershell> <building Mroonga...>
-powershell> ..\package-unzip.ps1
-powershell> ..\install-mroonga.ps1
-powershell> ..\create-mrnzip.ps1
+powershell> package-unzip.ps1
+powershell> install-mroonga.ps1
+powershell> create-mrnzip.ps1
 ```
 
 ### Environment
