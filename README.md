@@ -25,10 +25,11 @@ $mroongaVer = [specify Mroonga version]
 powershell> get-mroonga.ps1
 powershell> unzip.ps1
 powershell> prepare-building-mroonga.ps1
-cmd> <building Mroonga....>
-powershell> package-unzip.ps1
-powershell> install-mroonga.ps1
-powershell> create-mrnzip.ps1
+powershell> cd <mroonga build working dir>
+powershell> <building Mroonga...>
+powershell> ..\package-unzip.ps1
+powershell> ..\install-mroonga.ps1
+powershell> ..\create-mrnzip.ps1
 ```
 
 ### Environment
