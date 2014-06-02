@@ -31,6 +31,10 @@ powershell> install-mroonga.ps1
 powershell> create-mrnzip.ps1
 ```
 
+### Environment
+
+For Windows 8.1.
+
 ### LICENSE
 
 [MIT](LICENSE).
