@@ -20,6 +20,8 @@ $arch = "win32"
 
 mrnInstall $mariadbVer $arch $installSqlDir
 
+Start-Sleep -m 500
+
 #specify arch
 $arch = "winx64"
 
