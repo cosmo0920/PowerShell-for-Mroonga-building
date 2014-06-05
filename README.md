@@ -25,7 +25,7 @@ $mroongaVer = [specify Mroonga version]
 powershell> build-vs2013.ps1
 ```
 
-## execution order ps1 if it execute individually
+## execution order ps1 if it executes individually
 
 ```bat
 powershell> get-mroonga.ps1 # or get-mroonga-nightly.ps1
