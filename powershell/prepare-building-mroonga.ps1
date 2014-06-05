@@ -5,4 +5,4 @@ if (Test-Path -path $workDir) {
 }
 New-Item $workDir -itemType directory
 Move-Item mariadb-*-for-windows* $workDir/$sourceDir
-Copy-Item batfiles/build-*.bat $workDir
+Copy-Item batfiles\build-*.bat $workDir
