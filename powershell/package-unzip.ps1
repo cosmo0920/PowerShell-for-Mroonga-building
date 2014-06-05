@@ -1,8 +1,6 @@
 # $file: need specify full path
 . ".\versions.ps1"
 
-cd $workDir
-
 function unzipMrnPackage($workDir, $mariaDBVer, $arch) {
   $file = "$workDir\mariadb-$mariadbVer-$arch.zip"
   $shell = New-Object -ComObject shell.application
@@ -11,6 +9,8 @@ function unzipMrnPackage($workDir, $mariaDBVer, $arch) {
 
   $dest.CopyHere($zip.Items())
 }
+
+cd $workDir
 
 $arch = "win32"
 
