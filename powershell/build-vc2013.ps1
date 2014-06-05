@@ -25,7 +25,8 @@ if($result -eq 1) {
 
 # build MariaDB bundled Mroonga
 cd $workDir
-cmd /c "build-vc2013.bat"
+cmd /c "build-vc2013-zip-32.bat"
+cmd /c "build-vc2013-zip-64.bat"
 cd ..
 
 # packaging Mroonga
