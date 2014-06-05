@@ -4,7 +4,7 @@ Tiny PowerShell Script to build Mroonga under Windows environment
 ## Project structure
 
 ```log
----source.zip
+---(source.zip/source-nightly.zip) downloaded by get-mroonga.ps1/get-mroonga-nightly.ps1
  |
  -- batfiles/*.bat # put mroonga bat file
  |
@@ -19,10 +19,16 @@ $mariadbVer = [specify mariaDB version]
 $mroongaVer = [specify Mroonga version]
 ```
 
-## execution order ps1
+## building for Visual Studio 2013 Express
+
+```powershell
+powershell> build-vs2013.ps1
+```
+
+## execution order ps1 if it execute individually
 
 ```bat
-powershell> get-mroonga.ps1
+powershell> get-mroonga.ps1 # or get-mroonga-nightly.ps1
 powershell> unzip.ps1
 powershell> prepare-building-mroonga.ps1
 powershell> cd <mroonga build working dir>
