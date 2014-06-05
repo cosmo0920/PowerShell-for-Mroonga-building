@@ -27,7 +27,7 @@ if($result -eq 1) {
 cd $workDir
 cmd /c "build-vc2013-zip-32.bat"
 cmd /c "build-vc2013-zip-64.bat"
-cd ..
+cd $originDir
 
 # packaging Mroonga
 .\package-unzip.ps1

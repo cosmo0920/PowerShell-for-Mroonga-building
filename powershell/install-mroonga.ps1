@@ -27,4 +27,4 @@ $arch = "winx64"
 
 mrnInstall $mariadbVer $arch $installSqlDir
 
-cd ..
+cd $originDir

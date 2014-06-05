@@ -35,4 +35,4 @@ if (Test-Path $destFile)
 
 zip "$destFile" "$srcDir"
 
-cd ..
+cd $originDir
