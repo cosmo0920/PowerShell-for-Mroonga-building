@@ -13,7 +13,7 @@ function mrnInstall($mariadbVer, $arch, $installSqlDir) {
   cd ..
 }
 
-$installSqlDir = "data"
+$installSqlDir = "share\mroonga"
 
 #specify arch
 $arch = "win32"
