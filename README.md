@@ -1,6 +1,14 @@
 Tiny PowerShell Script to build Mroonga under Windows environment
 ===
 
+## PowerShell Excecution Policy
+
+Currently, these ps1 are not signed.
+
+So, it need change Excecution Policy to `RemoteSigned`.
+
+Or, execute `batfile\change-policy-vc2010.bat` or `batfile\change-policy-vc2013.bat` with system administrator privileges.
+
 ## Project structure
 
 ```log
