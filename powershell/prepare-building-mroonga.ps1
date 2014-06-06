@@ -4,6 +4,12 @@ if ((Get-Command cmake) -eq $null) {
   Exit
 }
 
+# check install bison
+if ((Get-Command bison) -eq $null) {
+  echo "Please install bison."
+  Exit
+}
+
 $workDir = "work"
 $sourceDir = "source"
 if (Test-Path -path $workDir) {
