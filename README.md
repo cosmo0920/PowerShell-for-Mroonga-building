@@ -27,9 +27,11 @@ $mariadbVer = [specify mariaDB version]
 $mroongaVer = [specify Mroonga version]
 ```
 
-## building for Visual Studio 2010
+## building for Visual Studio 2010 Professional
 
-In preparation....
+```powershell
+powershell> build-vs2010.ps1
+```
 
 ## building for Visual Studio 2013 Express
 
