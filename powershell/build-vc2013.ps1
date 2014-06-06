@@ -7,7 +7,7 @@ $caption = "== Mroonga source download =="
 $message = "Do you want to use nightly package?"
 $result = $Host.UI.PromptForChoice($caption,$message,$choices,0)
 # download Mroonga source
-if($result -eq 0) { 
+if($result -eq 0) {
   Write-Host "Use Mroonga $mroongaVer nightly source"
   .\get-mroonga-nightly.ps1
   $zipname = "source-nightly.zip"
