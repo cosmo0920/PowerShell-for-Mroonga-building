@@ -52,9 +52,13 @@ powershell> install-mroonga.ps1
 powershell> create-mrnzip.ps1
 ```
 
-### Environment
+### Requrement
 
-For Windows 8.1.
+* System.IO.Compression.FileSystem.dll
+
+It is contained from .NET Framework 4.5.
+
+See in more detail: [MSDN](http://msdn.microsoft.com/ja-jp/library/system.io.compression.zipfile.aspx)
 
 ### LICENSE
 
