@@ -52,7 +52,7 @@ powershell> install-mroonga.ps1
 powershell> create-mrnzip.ps1
 ```
 
-### Requrement
+### Requrements
 
 * System.IO.Compression.FileSystem.dll
 
