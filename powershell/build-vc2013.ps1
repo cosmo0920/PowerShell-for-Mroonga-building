@@ -24,6 +24,8 @@ echo "extract Mroonga $mroongaVer zip"
 .\unzip.ps1
 echo "prepare Mroonga $mroongaVer building"
 .\prepare-building-mroonga.ps1
+echo "get Mroonga batfile for windows"
+.\get-mroonga-batfiles.ps1
 
 # build MariaDB bundled Mroonga
 echo "building Mroonga $mroongaVer with MariaDB $mariadbVer ..."
