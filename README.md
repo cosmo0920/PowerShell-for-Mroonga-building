@@ -14,7 +14,7 @@ Or, execute `batfile\change-policy-vc2010.bat` or `batfile\change-policy-vc2013.
 ```log
 ---(source.zip/source-nightly.zip) downloaded by get-mroonga.ps1/get-mroonga-nightly.ps1
  |
- -- batfiles/*.bat # put mroonga bat file
+ -- (batfiles) # downloaded by `get-mroonga-batfiles.ps1`.
  |
  -- *.ps1
 ```
@@ -45,6 +45,7 @@ powershell> build-vs2013.ps1
 powershell> get-mroonga.ps1 # or get-mroonga-nightly.ps1
 powershell> unzip.ps1
 powershell> prepare-building-mroonga.ps1
+powerShell> get-mroonga-batfiles.ps1
 powershell> cd <mroonga build working dir>
 powershell> <building Mroonga...>
 powershell> package-unzip.ps1
