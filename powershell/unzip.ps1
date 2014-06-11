@@ -1,5 +1,10 @@
-if ($file -eq $null) {
-  $zipname = "source.zip"
+$stable = "source.zip"
+$nightly = "source-nightly.zip"
+if (Test-Path -path "$stable") {
+  $zipname = "$stable"
+}
+if (Test-Path -path "$nightly") {
+  $zipname = "$nightly"
 }
 
 $file = $(Get-ChildItem $zipname).FullName
