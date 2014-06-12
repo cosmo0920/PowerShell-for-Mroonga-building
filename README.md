@@ -44,8 +44,8 @@ powershell> build-vs2013.ps1
 ```bat
 powershell> get-mroonga.ps1 # or get-mroonga-nightly.ps1
 powershell> unzip.ps1
-powershell> prepare-building-mroonga.ps1
 powerShell> get-mroonga-batfiles.ps1
+powershell> prepare-building-mroonga.ps1
 powershell> cd <mroonga build working dir>
 powershell> <building Mroonga...>
 powershell> package-unzip.ps1
