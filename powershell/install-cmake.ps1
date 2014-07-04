@@ -8,4 +8,4 @@ $pathToZip = "$pwd\cmake.zip"
 [System.IO.Compression.ZipFile]::ExtractToDirectory($pathToZip, $pwd)
 
 # set Path
-$Env:Path = ".\cmake-${cmakeVersion}-win32-x86\bin;" + $Env:Path
+$Env:Path = "$pwd\cmake-${cmakeVersion}-win32-x86\bin;" + $Env:Path
