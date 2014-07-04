@@ -6,7 +6,7 @@ $pathToZip = "$pwd\cmake.zip"
 $targetDir = "$pwd\cmake"
 #Load the assembly
 [System.Reflection.Assembly]::LoadWithPartialName("System.IO.Compression.FileSystem") | Out-Null
-[System.IO.Compression.ZipFile]::ExtractToDirectory($pathToZip, $targetDir)
+[System.IO.Compression.ZipFile]::ExtractToDirectory($pathToZip, $pwd)
 
 # set Path
-$Env:Path = "$targetDir\cmake-${cmakeVersion}\win32-x86;" + $Env:Path
+$Env:Path = ".\cmake-${cmakeVersion}-win32-x86\bin;" + $Env:Path
