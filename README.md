@@ -27,30 +27,40 @@ $mariadbVer = [specify mariaDB version]
 $mroongaVer = [specify Mroonga version]
 ```
 
+## install-cmake.ps1
+
+To install moderate version of cmake for Mroonga building under Windows environment.
+
+Currently, this ps1 installs `cmake-2.8.11.2`.
+
+```powershell
+powershell> .\install-cmake.ps1
+```
+
 ## building for Visual Studio 2010 Professional
 
 ```powershell
-powershell> build-vs2010.ps1
+powershell> .\build-vs2010.ps1
 ```
 
 ## building for Visual Studio 2013 Express
 
 ```powershell
-powershell> build-vs2013.ps1
+powershell> .\build-vs2013.ps1
 ```
 
 ## execution order ps1 if it executes individually
 
 ```bat
-powershell> get-mroonga.ps1 # or get-mroonga-nightly.ps1
-powershell> unzip.ps1
-powerShell> get-mroonga-batfiles.ps1
-powershell> prepare-building-mroonga.ps1
+powershell> .\get-mroonga.ps1 # or get-mroonga-nightly.ps1
+powershell> .\unzip.ps1
+powerShell> .\get-mroonga-batfiles.ps1
+powershell> .\prepare-building-mroonga.ps1
 powershell> cd <mroonga build working dir>
 powershell> <building Mroonga...>
-powershell> package-unzip.ps1
-powershell> install-mroonga.ps1
-powershell> create-mrnzip.ps1
+powershell> .\package-unzip.ps1
+powershell> .\install-mroonga.ps1
+powershell> .\create-mrnzip.ps1
 ```
 
 ### Requrements
