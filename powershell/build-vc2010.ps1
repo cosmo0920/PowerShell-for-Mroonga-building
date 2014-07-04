@@ -19,7 +19,7 @@ try {
     .\get-mroonga.ps1
     $zipname = "source.zip"
   }
-} catch {
+} catch [NotImplementedException] {
   Write-Host "Use Mroonga $mroongaVer nightly source"
   .\get-mroonga-nightly.ps1
   $zipname = "source-nightly.zip"
