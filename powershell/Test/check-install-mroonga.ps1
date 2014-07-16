@@ -9,5 +9,8 @@ function check_built_mroonga($arch) {
   cd $currentDir
 }
 
-check_built_mroonga win32
-check_built_mroonga winx64
+$arch = "win32", "winx64"
+
+foreach ($platform in $arch) {
+  check_built_mroonga $platform
+}
