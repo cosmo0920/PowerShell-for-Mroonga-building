@@ -1,4 +1,4 @@
-# Check installed Mroonga for x86
+# Check installed Mroonga for (x86|x64)
 
 function check_built_mroonga($arch) {
   $currentDir = pwd
