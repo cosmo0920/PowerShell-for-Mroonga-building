@@ -14,14 +14,13 @@ echo "prepare Mroonga $mroongaVer building"
 .\prepare-building-mroonga.ps1
 
 # build MariaDB bundled Mroonga
+if ($vcVer -eq $null) {
+  exit 2
+}
 echo "building Mroonga $mroongaVer with MariaDB $mariadbVer ..."
 cd $workDir
-cmd /c "build-vc2010-zip-32.bat"
-cmd /c "build-vc2010-zip-64.bat"
-<# msi build does not correctly work yet :(
-cmd /c "build-vc2010-msi-32.bat"
-cmd /c "build-vc2010-msi-64.bat"
-#>
+cmd /c "build-$vcVer-zip-32.bat"
+cmd /c "build-$vcVer-zip-64.bat"
 cd $originDir
 
 # packaging Mroonga
