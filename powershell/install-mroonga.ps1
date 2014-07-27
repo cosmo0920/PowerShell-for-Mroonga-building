@@ -15,16 +15,11 @@ function mrnInstall($mariadbVer, $arch, $installSqlDir) {
 
 $installSqlDir = "share\mroonga"
 
-#specify arch
-$arch = "win32"
-
-mrnInstall $mariadbVer $arch $installSqlDir
-
-Start-Sleep -m 500
-
-#specify arch
-$arch = "winx64"
-
-mrnInstall $mariadbVer $arch $installSqlDir
+$platform = "win32", "winx64"
+foreach ($arch in $platform)
+{
+  mrnInstall $mariadbVer $arch $installSqlDir
+  Start-Sleep -m 500
+}
 
 cd $originDir

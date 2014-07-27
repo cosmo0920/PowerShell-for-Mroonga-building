@@ -9,30 +9,20 @@ function zip([string]$destFile, [string]$srcDir)
     [System.IO.Compression.ZipFile]::CreateFromDirectory($srcDir, $destFile, $compressionLevel, $includeBaseDir)
 }
 
-$arch = "win32"
-$destFile = "$workDir\mariadb-$mariadbVer-with-mroonga-$mroongaVer-$arch.zip"
-$srcDir = "$workDir\mariadb-$mariadbVer-$arch"
-
+$platform = "win32", "winx64"
 cd $workDir
 
-## create win32 package
-if (Test-Path $destFile)
+foreach ($arch in $platform)
 {
-    rm $destFile
+  $destFile = "$workDir\mariadb-$mariadbVer-with-mroonga-$mroongaVer-$arch.zip"
+  $srcDir = "$workDir\mariadb-$mariadbVer-$arch"
+
+  if (Test-Path $destFile)
+  {
+      rm $destFile
+  }
+
+  zip "$destFile" "$srcDir"
 }
-
-zip "$destFile" "$srcDir"
-
-## create winx64 package
-$arch = "winx64"
-$destFile = "$workDir\mariadb-$mariadbVer-with-mroonga-$mroongaVer-$arch.zip"
-$srcDir = "$workDir\mariadb-$mariadbVer-$arch"
-
-if (Test-Path $destFile)
-{
-    rm $destFile
-}
-
-zip "$destFile" "$srcDir"
 
 cd $originDir

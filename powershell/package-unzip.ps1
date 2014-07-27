@@ -10,12 +10,11 @@ function unzipMrnPackage($workDir, $mariaDBVer, $arch) {
 
 cd $workDir
 
-$arch = "win32"
+$platform = "win32", "winx64"
 
-unzipMrnPackage $workDir $mariaDBVer $arch
-
-$arch = "winx64"
-
-unzipMrnPackage $workDir $mariaDBVer $arch
+foreach ($arch in $platform)
+{
+  unzipMrnPackage $workDir $mariaDBVer $arch
+}
 
 cd $originDir
