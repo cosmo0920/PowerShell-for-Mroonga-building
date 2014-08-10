@@ -4,9 +4,9 @@
 
 function zip([string]$destFile, [string]$srcDir)
 {
-    $compressionLevel = [System.IO.Compression.CompressionLevel]::Optimal
-    $includeBaseDir = $false
-    [System.IO.Compression.ZipFile]::CreateFromDirectory($srcDir, $destFile, $compressionLevel, $includeBaseDir)
+  $compressionLevel = [System.IO.Compression.CompressionLevel]::Optimal
+  $includeBaseDir = $false
+  [System.IO.Compression.ZipFile]::CreateFromDirectory($srcDir, $destFile, $compressionLevel, $includeBaseDir)
 }
 
 $platform = "win32", "winx64"
@@ -19,7 +19,7 @@ foreach ($arch in $platform)
 
   if (Test-Path $destFile)
   {
-      rm $destFile
+    rm $destFile
   }
 
   zip "$destFile" "$srcDir"
