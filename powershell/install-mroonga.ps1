@@ -8,7 +8,11 @@ cd $workDir
 function mrnInstall($mariadbVer, $arch, $installSqlDir) {
   cd "mariadb-$mariadbVer-$arch"
   cmd /c "start .\bin\mysqld.exe"
-  Start-Sleep -m 500
+  do
+  {
+    $Running = Get-Process mysqld -ErrorAction SilentlyContinue
+    Start-Sleep -m 500
+  } while (!$Running)
   cmd /c ".\bin\mysql.exe -uroot <$installSqlDir\install.sql"
   cmd /c ".\bin\mysqladmin.exe -uroot shutdown"
   cd ..
