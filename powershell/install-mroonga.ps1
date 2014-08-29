@@ -5,16 +5,29 @@
 
 cd $workDir
 
+function waitUntilRunning($cmdName) {
+  do
+  {
+    $Running = Get-Process $cmdName -ErrorAction SilentlyContinue
+    Start-Sleep -m 500
+  } while (!$Running)
+}
+
+function waitUntilTerminate($cmdName) {
+  do
+  {
+    $Running = Get-Process $cmdName -ErrorAction SilentlyContinue
+    Start-Sleep -m 500
+  } while ($Running)
+}
+
 function mrnInstall($mariadbVer, $arch, $installSqlDir) {
   cd "mariadb-$mariadbVer-$arch"
   cmd /c "start .\bin\mysqld.exe"
-  do
-  {
-    $Running = Get-Process mysqld -ErrorAction SilentlyContinue
-    Start-Sleep -m 500
-  } while (!$Running)
+  waitUntilRunning mysqld
   cmd /c ".\bin\mysql.exe -uroot <$installSqlDir\install.sql"
   cmd /c ".\bin\mysqladmin.exe -uroot shutdown"
+  waitUntilTerminate mysqld
   cd ..
 }
 
