@@ -9,4 +9,4 @@ $pathToZip = "$pwd\${wixArchiveName}"
 [System.IO.Compression.ZipFile]::ExtractToDirectory($pathToZip, "$pwd\${wixInstallDir}")
 
 # set Path
-$Env:Path = "$pwd\${wixArchiveName};" + $Env:Path
+$Env:Path = "$pwd\${wixInstallDir};" + $Env:Path
