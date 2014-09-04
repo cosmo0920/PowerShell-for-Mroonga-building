@@ -74,3 +74,7 @@ See in more detail: [MSDN](http://msdn.microsoft.com/ja-jp/library/system.io.com
 ### LICENSE
 
 [MIT](LICENSE).
+
+### TODO
+
+* 'ERROR 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061 "Unknown error")' error message sometimes occurs.
