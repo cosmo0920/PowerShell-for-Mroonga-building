@@ -1,7 +1,7 @@
-diff --git plugins/token_filters/CMakeLists.txt plugins/token_filters/CMakeLists.txt
+diff --git storage/mroonga/vendor/groonga/plugins/token_filters/CMakeLists.txt storage/mroonga/vendor/groonga/plugins/token_filters/CMakeLists.txt
 index d3ddc79..e03fbb4 100644
---- plugins/token_filters/CMakeLists.txt
-+++ plugins/token_filters/CMakeLists.txt
+--- storage/mroonga/vendor/groonga/plugins/token_filters/CMakeLists.txt
++++ storage/mroonga/vendor/groonga/plugins/token_filters/CMakeLists.txt
 @@ -28,4 +28,5 @@ set_source_files_properties(${STOP_WORD_SOURCES}
  set_target_properties(stop_word_token_filter PROPERTIES
    PREFIX ""
