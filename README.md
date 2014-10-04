@@ -63,6 +63,16 @@ powershell> .\install-mroonga.ps1
 powershell> .\create-mrnzip.ps1
 ```
 
+### for developer
+
+```powershell
+$applyPatch = $TRUE
+```
+
+and then,
+
+Put into `patches` directory, patches are applied automatically.
+
 ### Requrements
 
 * System.IO.Compression.FileSystem.dll
@@ -70,6 +80,8 @@ powershell> .\create-mrnzip.ps1
 It is contained from .NET Framework 4.5.
 
 See in more detail: [MSDN](http://msdn.microsoft.com/ja-jp/library/system.io.compression.zipfile.aspx)
+
+* GNU patch (optional)
 
 ### LICENSE
 
