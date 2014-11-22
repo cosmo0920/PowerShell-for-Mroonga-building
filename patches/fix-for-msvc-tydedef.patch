@@ -1,5 +1,5 @@
 diff --git storage/mroonga/vendor/groonga/lib/grn.h storage/mroonga/vendor/groonga/lib/grn.h
-index 31f86bf..2cd6240 100644
+index 2cd6240..38c9d35 100644
 --- storage/mroonga/vendor/groonga/lib/grn.h
 +++ storage/mroonga/vendor/groonga/lib/grn.h
 @@ -136,19 +136,19 @@
@@ -19,16 +19,16 @@ index 31f86bf..2cd6240 100644
 -typedef ssize_t SSIZE_T;
 -typedef pid_t int;
 -typedef off64_t int64_t;
-+typedef UNIT8 uint8_t;
++typedef UINT8 uint8_t;
 +typedef INT8 int8_t;
 +typedef INT8 int_least8_t;
-+typedef UNIT8 uint_least8_t;
++typedef UINT8 uint_least8_t;
 +typedef INT16 int16_t;
-+typedef UNIT16 uint16_t;
++typedef UINT16 uint16_t;
 +typedef INT32 int32_t;
-+typedef UNIT32 uint32_t;
++typedef UINT32 uint32_t;
 +typedef INT64 int64_t;
-+typedef UNIT64 uint64_t;
++typedef UINT64 uint64_t;
 +typedef SSIZE_T ssize_t;
 +typedef int pid_t;
 +typedef int64_t off64_t;
