@@ -1,4 +1,4 @@
 $originDir = $(Get-Item ".").FullName
 $workDir = "$originDir\work"
 $mariadbVer = "10.0.14"
-$mroongaVer = "4.07"
+$mroongaVer = "4.08"
