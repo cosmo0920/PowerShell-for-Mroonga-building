@@ -1,6 +1,6 @@
 . ".\versions.ps1"
 
-if($downloadRequestSkip -eq $TRUE) {
+if ($downloadRequestSkip -eq $TRUE) {
   Write-Host "Package downloading skipped."
 } else {
   $yes = New-Object System.Management.Automation.Host.ChoiceDescription "&Yes",""
@@ -11,14 +11,14 @@ if($downloadRequestSkip -eq $TRUE) {
   try {
     $result = $Host.UI.PromptForChoice($caption,$message,$choices,0)
     # download Mroonga source
-    if($result -eq 0) {
+    if ($result -eq 0) {
       Write-Host "Use Mroonga $mroongaVer nightly source"
       .\get-mroonga-nightly.ps1
       $zipname = "source-nightly.zip"
       $useNightly = $TRUE
     }
 
-    if($result -eq 1) {
+    if ($result -eq 1) {
       Write-Host "Use Mroonga $mroongaVer source"
       .\get-mroonga.ps1
       $zipname = "source.zip"
