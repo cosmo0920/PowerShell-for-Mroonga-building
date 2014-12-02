@@ -1,6 +1,6 @@
 . ".\versions.ps1"
 
-if($downloadRequestSkip -eq $null) {
+if($downloadRequestSkip -eq $TRUE) {
   Write-Host "Package downloading skipped."
 } else {
   $yes = New-Object System.Management.Automation.Host.ChoiceDescription "&Yes",""
