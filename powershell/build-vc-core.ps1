@@ -15,6 +15,7 @@ if($downloadRequestSkip -eq $null) {
       Write-Host "Use Mroonga $mroongaVer nightly source"
       .\get-mroonga-nightly.ps1
       $zipname = "source-nightly.zip"
+      $useNightly = $TRUE
     }
 
     if($result -eq 1) {
