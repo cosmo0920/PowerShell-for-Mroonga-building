@@ -1,4 +1,4 @@
-if ($useNightly -eq $TRUE)
+if ($useNightly -eq $TRUE) {
   $nightly = "source-nightly.zip"
   if (Test-Path -path "$nightly") {
     $zipname = "$nightly"
