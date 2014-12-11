@@ -2,14 +2,18 @@ if ($useNightly -eq $TRUE) {
   $nightly = "source-nightly.zip"
   if (Test-Path -path "$nightly") {
     $zipname = "$nightly"
+  } else {
+    Write-Host "Not found valid package source."
+    exit 1
   }
-}
-$stable = "source.zip"
-if (Test-Path -path "$stable") {
-  $zipname = "$stable"
 } else {
-  Write-Host "Not found valid package source."
-  exit 1
+  $stable = "source.zip"
+  if (Test-Path -path "$stable") {
+    $zipname = "$stable"
+  } else {
+    Write-Host "Not found valid package source."
+    exit 1
+  }
 }
 
 $file = $(Get-ChildItem $zipname).FullName
