@@ -3,7 +3,7 @@ if ($useNightly -eq $TRUE) {
   if (Test-Path -path "$nightly") {
     $zipname = "$nightly"
   } else {
-    Write-Host "Not found valid package source."
+    Write-Host "Not found valid nightly package source."
     exit 1
   }
 } else {
