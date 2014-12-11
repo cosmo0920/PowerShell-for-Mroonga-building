@@ -1,5 +1,7 @@
 . ".\versions.ps1"
 
+# always use nightly package
+$useNightly = $TRUE
 # download Mroonga nightly source
 Write-Host "Use Mroonga $mroongaVer nightly source"
 .\get-mroonga-nightly.ps1

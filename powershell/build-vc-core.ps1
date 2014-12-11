@@ -1,8 +1,5 @@
 . ".\versions.ps1"
 
-# always use nightly package
-$useNightly = $TRUE
-
 if ($downloadRequestSkip -eq $TRUE) {
   Write-Host "Package downloading skipped."
 } else {
