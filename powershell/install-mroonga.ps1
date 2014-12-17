@@ -5,7 +5,7 @@
 
 cd $workDir
 
-function waitUntilRunning($cmdName) {
+function Wait-UntilRunning($cmdName) {
   do
   {
     $Running = Get-Process $cmdName -ErrorAction SilentlyContinue
@@ -13,7 +13,7 @@ function waitUntilRunning($cmdName) {
   } while (!$Running)
 }
 
-function waitUntilTerminate($cmdName) {
+function Wait-UntilTerminate($cmdName) {
   do
   {
     $Running = Get-Process $cmdName -ErrorAction SilentlyContinue
@@ -21,13 +21,13 @@ function waitUntilTerminate($cmdName) {
   } while ($Running)
 }
 
-function mrnInstall($mariadbVer, $arch, $installSqlDir) {
+function Install-Mroonga($mariadbVer, $arch, $installSqlDir) {
   cd "mariadb-$mariadbVer-$arch"
   cmd /c "start .\bin\mysqld.exe"
-  waitUntilRunning mysqld
+  Wait-UntilRunning mysqld
   cmd /c ".\bin\mysql.exe -uroot <$installSqlDir\install.sql"
   cmd /c ".\bin\mysqladmin.exe -uroot shutdown"
-  waitUntilTerminate mysqld
+  Wait-UntilTerminate mysqld
   cd ..
 }
 
@@ -36,7 +36,7 @@ $installSqlDir = "share\mroonga"
 $platform = "win32", "winx64"
 foreach ($arch in $platform)
 {
-  mrnInstall $mariadbVer $arch $installSqlDir
+  Install-Mroonga $mariadbVer $arch $installSqlDir
   Start-Sleep -m 500
 }
 
