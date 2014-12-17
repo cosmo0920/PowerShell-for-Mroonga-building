@@ -6,7 +6,7 @@ if ((Get-Command patch) -eq $null) {
 }
 
 if ($applyPatch -eq $null) {
-  echo "Nothing to do!"	
+  echo "Nothing to do!"
 } else {
   cd "$workDir\source"
   $patches = $(Get-ChildItem "$originDir\..\patches").FullName
