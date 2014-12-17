@@ -1,7 +1,7 @@
 # $file: need specify full path
 . ".\versions.ps1"
 
-function unzipMrnPackage($workDir, $mariaDBVer, $arch) {
+function Unzip-MroongaPackage($workDir, $mariaDBVer, $arch) {
   $file = "$workDir\mariadb-$mariadbVer-$arch.zip"
 
   if ($file -eq $null) {
@@ -19,7 +19,7 @@ $platform = "win32", "winx64"
 
 foreach ($arch in $platform)
 {
-  unzipMrnPackage $workDir $mariaDBVer $arch
+  Unzip-MroongaPackage $workDir $mariaDBVer $arch
 }
 
 cd $originDir

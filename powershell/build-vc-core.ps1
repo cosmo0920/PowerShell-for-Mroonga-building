@@ -31,17 +31,17 @@ if ($downloadRequestSkip -eq $TRUE) {
 }
 
 # prepare building Mroonga
-echo "extract Mroonga $mroongaVer zip"
+Write-Host "extract Mroonga $mroongaVer zip"
 .\unzip.ps1
-echo "get Mroonga batfile for windows"
+Write-Host "get Mroonga batfile for windows"
 .\get-mroonga-batfiles.ps1
-echo "prepare Mroonga $mroongaVer building"
+Write-Host "prepare Mroonga $mroongaVer building"
 .\prepare-building-mroonga.ps1
-echo "apply patch file(s)"
+Write-Host "apply patch file(s)"
 .\apply-patch.ps1
 
 # build MariaDB bundled Mroonga
-echo "building Mroonga $mroongaVer with MariaDB $mariadbVer ..."
+Write-Host "building Mroonga $mroongaVer with MariaDB $mariadbVer ..."
 cd $workDir
 cmd /c "build-$vcVer-zip-32.bat"
 cmd /c "build-$vcVer-zip-64.bat"
@@ -52,9 +52,9 @@ cmd /c "build-$vcVer-msi-64.bat"
 cd $originDir
 
 # packaging Mroonga
-echo "unpack Mroonga $mroongaVer packed zip"
+Write-Host "unpack Mroonga $mroongaVer packed zip"
 .\package-unzip.ps1
-echo "install Mroonga $mroongaVer to MariaDB"
+Write-Host "install Mroonga $mroongaVer to MariaDB"
 .\install-mroonga.ps1
-echo "packing Mroonga $mroongaVer"
+Write-Host "packing Mroonga $mroongaVer"
 .\create-mrnzip.ps1

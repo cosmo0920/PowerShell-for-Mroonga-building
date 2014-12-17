@@ -19,7 +19,7 @@ foreach ($arch in $platform)
 
   if (Test-Path $destFile)
   {
-    rm $destFile
+    Remove-Item $destFile
   }
 
   New-ZipItem "$destFile" "$srcDir"

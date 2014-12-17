@@ -1,12 +1,12 @@
 # check install cmake
 if ((Get-Command cmake) -eq $null) {
-  echo "Please install cmake 2.8.11.2."
+  Write-Host "Please install cmake 2.8.11.2."
   Exit
 }
 
 # check install bison
 if ((Get-Command bison) -eq $null) {
-  echo "Please install bison."
+  Write-Host "Please install bison."
   Exit
 }
 
