@@ -2,7 +2,7 @@
 
 [Reflection.Assembly]::LoadWithPartialName("System.IO.Compression.FileSystem")
 
-function zip([string]$destFile, [string]$srcDir)
+function New-ZipItem([string]$destFile, [string]$srcDir)
 {
   $compressionLevel = [System.IO.Compression.CompressionLevel]::Optimal
   $includeBaseDir = $false
@@ -22,7 +22,7 @@ foreach ($arch in $platform)
     rm $destFile
   }
 
-  zip "$destFile" "$srcDir"
+  New-ZipItem "$destFile" "$srcDir"
 }
 
 cd $originDir
