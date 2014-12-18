@@ -5,4 +5,9 @@ if ($nightlyVer -eq $null) {
   $nightlyVer = "$today"
 }
 
-Invoke-WebRequest -Uri http://packages.groonga.org/nightly/mariadb-${mariadbVer}-with-mroonga-${mroongaVer}-for-windows.${nightlyVer}.zip -OutFile source-nightly.zip -ErrorAction Stop
+try {
+  Invoke-WebRequest -Uri http://packages.groonga.org/nightly/mariadb-${mariadbVer}-with-mroonga-${mroongaVer}-for-windows.${nightlyVer}.zip -OutFile source-nightly.zip
+} catch [System.Net.WebException] {
+  Write-Host "Not Found nightly package."
+  Exit 1
+}
