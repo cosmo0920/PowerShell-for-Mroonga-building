@@ -2,6 +2,10 @@
 
 if ($downloadRequestSkip -eq $TRUE) {
   Write-Host "Package downloading skipped."
+} elseif ($useReleasePackage -eq $TRUE) {
+  Write-Host "Use Mroonga $mroongaVer source"
+  .\get-mroonga.ps1
+  $zipname = "source.zip"
 } else {
   $yes = New-Object System.Management.Automation.Host.ChoiceDescription "&Yes",""
   $no = New-Object System.Management.Automation.Host.ChoiceDescription "&No",""
