@@ -7,7 +7,7 @@ Currently, these ps1 are not signed.
 
 So, it need change Excecution Policy to `RemoteSigned`.
 
-Or, execute `batfile\change-policy-vc2010.bat` or `batfile\change-policy-vc2013.bat` with system administrator privileges.
+Or, execute `batfile\change-policy-vc2013.bat` with system administrator privileges.
 
 ## Project structure
 
@@ -35,12 +35,6 @@ Currently, this ps1 installs `cmake-2.8.11.2`.
 
 ```powershell
 powershell> .\install-cmake.ps1
-```
-
-## building for Visual Studio 2010 Professional
-
-```powershell
-powershell> .\build-vs2010.ps1
 ```
 
 ## building for Visual Studio 2013 Express
