@@ -43,6 +43,12 @@ powershell> .\install-cmake.ps1
 powershell> .\build-vc2013.ps1
 ```
 
+## building for Visual Studio 2015 Preview *experimental*
+
+```powershell
+powershell> .\build-vc2015.ps1
+```
+
 ## execution order ps1 if it executes individually
 
 ```bat
