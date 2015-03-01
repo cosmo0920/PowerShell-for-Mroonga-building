@@ -40,7 +40,7 @@ powershell> .\install-cmake.ps1
 ## building for Visual Studio 2013 Express
 
 ```powershell
-powershell> .\build-vs2013.ps1
+powershell> .\build-vc2013.ps1
 ```
 
 ## execution order ps1 if it executes individually
