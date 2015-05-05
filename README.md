@@ -25,6 +25,8 @@ Or, execute `batfile\change-policy-vc2013.bat` with system administrator privile
 $workDir = [specify workdir]
 $mariadbVer = [specify mariaDB version]
 $mroongaVer = [specify Mroonga version]
+$useNightly = ($null|$true)
+$skipDownloadRequest = ($null|$true)
 ```
 
 ## install-cmake.ps1
