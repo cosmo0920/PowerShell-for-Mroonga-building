@@ -1,5 +1,5 @@
---- .\storage\mroonga\vendor\groonga\lib\grn.h.orig	2015-08-04 23:55:32 +0900
-+++ .\storage\mroonga\vendor\groonga\lib\grn.h	2015-08-04 23:42:50 +0900
+--- storage\mroonga\vendor\groonga\lib\grn.h.orig	2015-08-04 23:55:32 +0900
++++ storage\mroonga\vendor\groonga\lib\grn.h	2015-08-04 23:42:50 +0900
 @@ -70,6 +70,9 @@
  #  include <w32api.h>
  #  define WINVER WindowsVista
