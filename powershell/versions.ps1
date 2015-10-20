@@ -1,6 +1,6 @@
 $originDir = $(Get-Item ".").FullName
 $workDir = "$originDir\work"
-$mariadbVer = "10.0.21"
+$mariadbVer = "10.1.8"
 $mroongaVer = "5.08"
 $useNightly = $null
 #$useReleasePackage = $null
