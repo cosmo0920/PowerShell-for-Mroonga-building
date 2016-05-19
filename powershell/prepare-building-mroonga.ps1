@@ -13,7 +13,9 @@ if ((Get-Command bison) -eq $null) {
 $workDir = "work"
 $sourceDir = "source"
 if (Test-Path -path $workDir) {
-  Remove-Item $workDir -Recurse -Force
+  # Mroonga packages contains too loooooong file. Use rmdir instead.
+  cmd /c "rmdir /Q /S .\work"
+  # Remove-Item $workDir -Recurse -Force
 }
 New-Item $workDir -itemType directory
 Move-Item mariadb-*-for-windows* $workDir/$sourceDir
