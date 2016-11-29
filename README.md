@@ -73,7 +73,7 @@ $applyPatch = $TRUE
 
 and then,
 
-Put into `patches` directory, patches are applied automatically.
+Put into `patches` directory, patches are applied automatically with GNU patch.
 
 ### Requrements
 
