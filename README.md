@@ -45,7 +45,7 @@ powershell> .\install-cmake.ps1
 powershell> .\build-vc2013.ps1
 ```
 
-## building for Visual Studio 2015 Preview *experimental*
+## building for Visual Studio 2015 Community
 
 ```powershell
 powershell> .\build-vc2015.ps1
