@@ -29,14 +29,14 @@ $useNightly = ($null|$true)
 $skipDownloadRequest = ($null|$true)
 ```
 
-## install-cmake.ps1
+## install-cmake-3.1.ps1
 
 To install moderate version of cmake for Mroonga building under Windows environment.
 
-Currently, this ps1 installs `cmake-2.8.11.2`.
+Currently, this ps1 installs `cmake-3.1.3`.
 
 ```powershell
-powershell> .\install-cmake.ps1
+powershell> .\install-cmake-3.1.ps1
 ```
 
 ## building for Visual Studio 2013 Express (deprecated)
