@@ -21,7 +21,7 @@ build_script:
   - cmd: cmake --version
   - cmd: bison --version
   - ps: $env:Path.split(";")
-  - "echo # > win\\packaging\\CMakeLists.txt"
+  - "echo # > source\\win\\packaging\\CMakeLists.txt"
   - cmake . -G "%CMAKE_GENERATOR_NAME%"
       -DCMAKE_BUILD_TYPE=Debug
       -DWITHOUT_ARCHIVE=ON
