@@ -1,12 +1,17 @@
 clone_folder: c:\mrnwork
+environment:
+  matrix:
+    - CMAKE_GENERATOR_NAME: "Visual Studio 14 2015 Win64"
+
 build_script:
   - cmd: cd C:\mrnwork\powershell
   - ps: .\install-cmake-3.0.ps1
   - ps: .\appveyor\setting.ps1
   - ps: .\get-mroonga-nightly.ps1
-  - ps: .\unzip.ps1
+  - ps: 7z x source-nightly.zip # TODO: Use unzip.ps1
   - ps: ls
   - ps: .\get-mroonga-batfiles.ps1
+  - choco install -y gnuwin -version 0.6.3
   - ps: .\prepare-building-mroonga.ps1
   - cmd: cd .\work
   - cmd: ls
@@ -14,6 +19,31 @@ build_script:
   - cmd: cmake --version
   - cmd: bison --version
   - ps: $env:Path.split(";")
-  - cmd: .\build-vc2010-zip-32.bat
-
+  - "echo # > win\\packaging\\CMakeLists.txt"
+  - cmake . -G "%CMAKE_GENERATOR_NAME%"
+      -DCMAKE_BUILD_TYPE=Debug
+      -DWITHOUT_ARCHIVE=ON
+      -DWITHOUT_BLACKHOLE=ON
+      -DWITHOUT_CASSANDRA=ON
+      -DWITHOUT_CONNECT=ON
+      -DWITHOUT_CSV=ON
+      -DWITHOUT_EXAMPLE=ON
+      -DWITHOUT_FEDERATED=ON
+      -DWITHOUT_FEDERATEDX=ON
+      -DWITHOUT_HEAP=ON
+      -DWITHOUT_INNOBASE=ON
+      -DWITHOUT_MYISAM=ON
+      -DWITHOUT_MYISAMMRG=ON
+      -DWITHOUT_OQGRAPH=ON
+      -DWITHOUT_PERFSCHEMA=OFF
+      -DWITHOUT_SEQUENCE=ON
+      -DWITHOUT_SPHINX=ON
+      -DWITHOUT_SPIDER=ON
+      -DWITHOUT_TEST_SQL_DISCOVERY=ON
+      -DWITHOUT_TOKUDB=ON
+      -DWITHOUT_XTRADB=ON
+      -DWITH_UNIT_TESTS=OFF
+      -DGRN_WITH_BUNDLED_LZ4=ON
+      -DGRN_WITH_BUNDLED_MECAB=ON
+  - cmake --build . --config Debug
 test: off
