@@ -11,7 +11,9 @@ build_script:
   - ps: 7z x source-nightly.zip # TODO: Use unzip.ps1
   - ps: ls
   - ps: .\get-mroonga-batfiles.ps1
-  - choco install -y gnuwin -version 0.6.3
+  - set "PATH=C:\msys64\usr\bin;C:\msys64\mingw64\bin;C:\Windows\System32;C:\Windows;%PATH%"
+  - set MSYSTEM=MINGW64
+  - cmd: pacman -Sy --noconfirm bison
   - ps: .\prepare-building-mroonga.ps1
   - cmd: cd .\work
   - cmd: ls
