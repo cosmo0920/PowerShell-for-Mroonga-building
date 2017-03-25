@@ -7,7 +7,7 @@ Currently, these ps1 are not signed.
 
 So, it need change Excecution Policy to `RemoteSigned`.
 
-Or, execute `batfile\change-policy-vc2013.bat` with system administrator privileges.
+Or, execute `batfile\change-policy-vc2015.bat` with system administrator privileges.
 
 ## Project structure
 
@@ -39,7 +39,7 @@ Currently, this ps1 installs `cmake-2.8.11.2`.
 powershell> .\install-cmake.ps1
 ```
 
-## building for Visual Studio 2013 Express
+## building for Visual Studio 2013 Express (deprecated)
 
 ```powershell
 powershell> .\build-vc2013.ps1
