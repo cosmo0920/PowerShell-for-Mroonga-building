@@ -1,6 +1,8 @@
 Tiny PowerShell Script to build Mroonga under Windows environment
 ===
 
+[![Build status](https://ci.appveyor.com/api/projects/status/2xsau53jpm9cpu3y/branch/master?svg=true)](https://ci.appveyor.com/project/cosmo0920/powershell-for-mroonga-building/branch/master)
+
 ## PowerShell Excecution Policy
 
 Currently, these ps1 are not signed.
