@@ -67,6 +67,16 @@ powershell> .\install-mroonga.ps1
 powershell> .\create-mrnzip.ps1
 ```
 
+## Building prior Mroonga releases
+
+If you are interested in building prior Mroonga releases, please check out prior releases' git tags as follows:
+
+
+```powershell
+PS> git tag
+PS> git checkout <prior release tag>
+```
+
 ### for developer
 
 ```powershell
