@@ -5,3 +5,5 @@ $mroongaVer = "7.04"
 $useNightly = $null
 #$useReleasePackage = $null
 $downloadRequestSkip = $null
+$mroongaSourceBaseURI = $null
+$mroongaSourceNightlyBaseURI = $null
