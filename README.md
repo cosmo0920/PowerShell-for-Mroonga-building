@@ -29,6 +29,8 @@ $mariadbVer = [specify mariaDB version]
 $mroongaVer = [specify Mroonga version]
 $useNightly = ($null|$true)
 $skipDownloadRequest = ($null|$true)
+$mroongaSourceBaseURI = $null # for customizing source download URI
+$mroongaSourceNightlyBaseURI = $null # for customizing nightly source download URI
 ```
 
 ## install-cmake-3.1.ps1
