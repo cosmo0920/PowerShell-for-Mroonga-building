@@ -89,7 +89,7 @@ and then,
 
 Put into `patches` directory, patches are applied automatically with GNU patch.
 
-### Requrements
+### Requirements
 
 * System.IO.Compression.FileSystem.dll
 
