@@ -7,8 +7,8 @@ build_script:
   - cmd: cd C:\mrnwork\powershell
   - ps: .\install-cmake-3.1.ps1
   - ps: .\appveyor\setting.ps1
-  - ps: .\get-mroonga-nightly.ps1
-  - ps: 7z x source-nightly.zip # TODO: Use unzip.ps1
+  - ps: .\get-mroonga.ps1
+  - ps: 7z x source.zip # TODO: Use unzip.ps1
   - ps: ls
   - ps: .\get-mroonga-batfiles.ps1
   - set "PATH=C:\msys64\usr\bin;C:\msys64\mingw64\bin;C:\Windows\System32;C:\Windows;%PATH%"
