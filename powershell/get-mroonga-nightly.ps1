@@ -12,7 +12,7 @@ if ($mroongaSourceNightlyBaseURI -eq $null) {
 }
 
 try {
-  Invoke-WebRequest -Uri ${$mroongaSourceNightlyBaseURI}/mariadb-${mariadbVer}-with-mroonga-${mroongaVer}-for-windows.${nightlyVer}.zip -OutFile source-nightly.zip
+  Invoke-WebRequest -Uri ${mroongaSourceNightlyBaseURI}/mariadb-${mariadbVer}-with-mroonga-${mroongaVer}-for-windows.${nightlyVer}.zip -OutFile source-nightly.zip
 } catch [System.Net.WebException] {
   Write-Host "Not Found nightly package."
   Exit 1
