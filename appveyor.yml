@@ -1,7 +1,7 @@
 clone_folder: c:\mrnwork
 environment:
   matrix:
-    - CMAKE_GENERATOR_NAME: "Visual Studio 15 2017 Win64"
+    - CMAKE_GENERATOR_NAME: "Visual Studio 14 2015 Win64"
 
 build_script:
   - cmd: cd C:\mrnwork\powershell
