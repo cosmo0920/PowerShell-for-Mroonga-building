@@ -33,14 +33,14 @@ $mroongaSourceBaseURI = $null # for customizing source download URI
 $mroongaSourceNightlyBaseURI = $null # for customizing nightly source download URI
 ```
 
-## install-cmake-3.1.ps1
+## install-cmake-3.10.ps1
 
 To install moderate version of cmake for Mroonga building under Windows environment.
 
-Currently, this ps1 installs `cmake-3.1.3`.
+Currently, this ps1 installs `cmake-3.10.3`.
 
 ```powershell
-powershell> .\install-cmake-3.1.ps1
+powershell> .\install-cmake-3.10.ps1
 ```
 
 ## building for Visual Studio 2017 Community
