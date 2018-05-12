@@ -43,6 +43,12 @@ Currently, this ps1 installs `cmake-3.10.3`.
 powershell> .\install-cmake-3.10.ps1
 ```
 
+## building for Visual Studio 2015 Community
+
+```powershell
+powershell> .\build-vc2015.ps1
+```
+
 ## building for Visual Studio 2017 Community
 
 ```powershell
