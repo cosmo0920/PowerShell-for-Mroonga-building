@@ -9,7 +9,7 @@ Currently, these ps1 are not signed.
 
 So, it need change Excecution Policy to `RemoteSigned`.
 
-Or, execute `batfile\change-policy-vc2017.bat` with system administrator privileges.
+Or, execute `batfile\change-policy-vc2015.bat` or `batfile\change-policy-vc2017.bat` with system administrator privileges.
 
 ## Project structure
 
