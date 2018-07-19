@@ -7,7 +7,7 @@ Tiny PowerShell Script to build Mroonga under Windows environment
 
 Currently, these ps1 are not signed.
 
-So, it need change Excecution Policy to `RemoteSigned`.
+So, it needs change Excecution Policy to `RemoteSigned`.
 
 Or, execute `batfile\change-policy-vc2015.bat` or `batfile\change-policy-vc2017.bat` with system administrator privileges.
 
@@ -71,7 +71,7 @@ powershell> .\create-mrnzip.ps1
 
 ## Building prior Mroonga releases
 
-If you are interested in building prior Mroonga releases, please check out prior releases' git tags as follows:
+If you are interested in building prior Mroonga releases, please checkout prior releases' git tags as follows:
 
 
 ```powershell
@@ -85,9 +85,7 @@ PS> git checkout <prior release tag>
 $applyPatch = $TRUE
 ```
 
-and then,
-
-Put into `patches` directory, patches are applied automatically with GNU patch.
+and then, put into `patches` directory, patches are applied automatically with GNU patch.
 
 ### Requirements
 
