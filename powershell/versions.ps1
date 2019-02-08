@@ -1,7 +1,7 @@
 $originDir = $(Get-Item ".").FullName
 $workDir = "$originDir\work"
-$mariadbVer = "10.3.11"
-$mroongaVer = "8.09"
+$mariadbVer = "10.3.12"
+$mroongaVer = "9.00"
 $useNightly = $null
 #$useReleasePackage = $null
 $downloadRequestSkip = $null
