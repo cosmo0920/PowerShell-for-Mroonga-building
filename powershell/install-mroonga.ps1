@@ -32,7 +32,7 @@ function Install-Mroonga($mariadbVer, $arch, $installSqlDir) {
   cd ..
 }
 
-$installSqlDir = "share\mroonga"
+$installSqlDir = ".\share\mroonga"
 
 $platform = "win32", "winx64"
 foreach ($arch in $platform)
