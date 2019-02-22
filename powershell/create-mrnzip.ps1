@@ -1,7 +1,7 @@
 Param(
   [Parameter(mandatory=$false)][String]$mariadbVersion = $null,
   [Parameter(mandatory=$false)][String]$mroongaVersion = $null,
-  [Parameter(mandatory=$false)][String]$platform = $null
+  [Parameter(mandatory=$false)][String[]]$platforms = $null
 )
 
 [Reflection.Assembly]::LoadWithPartialName("System.IO.Compression.FileSystem")
@@ -14,9 +14,7 @@ if (!$mariadbVersion) {
 if (!$mroongaVersion) {
   $mroongaVersion = $mroongaVer
 }
-if ($platform) {
-  $platforms = $platform -split ","
-} else {
+if (!$platforms) {
   $platforms = "win32", "winx64"
 }
 
