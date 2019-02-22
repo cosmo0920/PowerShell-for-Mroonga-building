@@ -1,7 +1,24 @@
 # @$mariadbVer MariaDBVer
 # @$arch win32/winx64
 # @$installSqlDir specify install.sql dir
+
+Param(
+  [Parameter(mandatory=$false)][String]$mariadbVersion = $null,
+  [Parameter(mandatory=$false)][String]$mroongaVersion = $null,
+  [Parameter(mandatory=$false)][String[]]$platforms = $null
+)
+
 . ".\versions.ps1"
+
+if (!$mariadbVersion) {
+  $mariadbVersion = $mariadbVer
+}
+if (!$mroongaVersion) {
+  $mroongaVersion = $mroongaVer
+}
+if (!$platforms) {
+  $platforms = "win32", "winx64"
+}
 
 cd $workDir
 
@@ -34,10 +51,9 @@ function Install-Mroonga($mariadbVer, $arch, $installSqlDir) {
 
 $installSqlDir = ".\share\mroonga"
 
-$platform = "win32", "winx64"
-foreach ($arch in $platform)
+foreach ($arch in $platforms)
 {
-  Install-Mroonga $mariadbVer $arch $installSqlDir
+  Install-Mroonga $mariadbVersion $arch $installSqlDir
   Start-Sleep -m 500
 }
 
